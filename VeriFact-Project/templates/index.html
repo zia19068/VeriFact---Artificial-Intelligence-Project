@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeriFact AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <div class="logo">
+                <span class="icon">⚡</span>
+                <h1>VeriFact <span>v2</span></h1>
+            </div>
+            <p>Accurate AI Fact-Checker (Groq + K-Means + Knapsack + Minimax)</p>
+        </header>
+
+        <section class="search-section">
+            <form id="fact-check-form">
+                <div class="input-group">
+                    <input type="text" id="claim-input" placeholder="Enter a claim to verify (e.g. 'The Great Wall of China is visible from space')" required autocomplete="off">
+                    <button type="submit" id="submit-btn">
+                        <span>Check</span>
+                        <div class="loader hidden" id="btn-loader"></div>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="results-container" class="results-container hidden">
+            <!-- Verdict Banner -->
+            <div id="verdict-banner" class="verdict-banner">
+                <div class="verdict-icon" id="verdict-icon">✅</div>
+                <div class="verdict-text">
+                    <h2 id="verdict-title">VERIFIED</h2>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="card summary-card">
+                <h3>Summary</h3>
+                <p id="verdict-summary"></p>
+            </div>
+
+            <!-- Reasoning -->
+            <div class="card reasoning-card" id="reasoning-card">
+                <h3>AI Reasoning</h3>
+                <p id="verdict-reasoning"></p>
+            </div>
+
+            <!-- Key Findings -->
+            <div class="card findings-card">
+                <h3>Key Findings</h3>
+                <ul id="key-findings-list"></ul>
+            </div>
+
+            <!-- Caveats -->
+            <div class="card caveats-card hidden" id="caveats-card">
+                <h3>⚠ Caveats</h3>
+                <p id="verdict-caveats"></p>
+            </div>
+
+            <!-- Sources -->
+            <div class="card sources-card">
+                <h3>Sources Cited</h3>
+                <ul id="sources-list"></ul>
+            </div>
+            
+            <div class="meta-info">
+                <p>Checked at: <span id="meta-time"></span></p>
+                <p>Pipeline Time: <span id="meta-elapsed"></span>s | Sources Searched: <span id="meta-searched"></span></p>
+            </div>
+        </section>
+        
+        <div id="error-toast" class="toast hidden"></div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
