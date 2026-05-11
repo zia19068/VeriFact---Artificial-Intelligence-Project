@@ -7,7 +7,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Groq](https://img.shields.io/badge/Groq-Llama--3.3--70B-F55036?style=for-the-badge&logo=groq&logoColor=white)](https://groq.com)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![FAST-NUCES](https://img.shields.io/badge/FAST--NUCES-Karachi-005C2E?style=for-the-badge)](https://nu.edu.pk)
 [![AI Course](https://img.shields.io/badge/Artificial%20Intelligence-Spring%202026-1A3A5C?style=for-the-badge)](https://github.com/zia19068/VeriFact---Artificial-Intelligence-Project)
 
@@ -218,8 +217,8 @@ VeriFact---Artificial-Intelligence-Project/
 
 | Name | Roll Number | GitHub |
 |---|---|---|
-| **OM** | 24K-0711 | [@zia19068](https://github.com/zia19068) |
-| **Vishal** | 24K-0625 | — |
+| **OM** | 24K-0711 | [@OmKaran1111111](https://github.com/OmKaran1111111) |
+| **Vishal** | 24K-0625 | [VishalParwani76](https://github.com/VishalParwani76) | |
 | **Zia** | 24K-0817 | [@zia19068](https://github.com/zia19068) |
 
 **Course:** Artificial Intelligence (AI) — Section BCS-4K  
