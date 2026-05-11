@@ -1,0 +1,109 @@
+============================================================
+   VERIFACT — SETUP & RUN INSTRUCTIONS
+   AI-Powered Fact Checking System
+   FAST-NUCES Karachi | Spring 2026
+============================================================
+
+PREREQUISITES
+─────────────
+  • Python 3.11 or higher installed
+  • Internet connection (for live web search)
+  • A Groq API key (free at https://console.groq.com)
+
+
+STEP 1 — INSTALL DEPENDENCIES
+──────────────────────────────
+Open your terminal / PowerShell and run:
+
+  pip install groq openai duckduckgo-search scikit-learn ortools
+
+Wait for all packages to finish installing.
+
+
+STEP 2 — SET YOUR API KEY
+──────────────────────────
+You must set the GROQ_API_KEY environment variable before running.
+
+  ► Windows PowerShell (recommended):
+      $env:GROQ_API_KEY = "ENTER_YOUR_GROQ_API_KEY_HERE"
+
+  ► Windows Command Prompt (cmd):
+      set GROQ_API_KEY=ENTER_YOUR_GROQ_API_KEY_HERE
+
+  ► macOS / Linux (bash/zsh):
+      export GROQ_API_KEY="ENTER_YOUR_GROQ_API_KEY_HERE"
+
+  NOTE: This key is set for the current terminal session only.
+        Close and reopen the terminal = key is gone, you must set it again.
+
+
+STEP 3 — NAVIGATE TO PROJECT FOLDER
+──────────────────────────────────────
+  cd VeriFact---Artificial-Intelligence-Project\VeriFact-Project
+
+
+STEP 4 — RUN THE PROJECT
+─────────────────────────
+  python main.py
+
+  The program will start and show this menu:
+
+    ============================================================
+             VERIFACT - AI FACT CHECKING SYSTEM
+    ============================================================
+    Select mode:
+      [1] Fact Check a Claim
+      [2] Interactive Debate Mode
+      [3] Exit
+
+  Enter 1, 2, or 3 and press Enter.
+
+
+USING THE MODES
+───────────────
+  [1] FACT CHECK A CLAIM
+      → Type any claim and press Enter
+      → VeriFact will search the web, analyse evidence, and
+        return a verdict: VERIFIED / FALSE / PARTIALLY TRUE / INCONCLUSIVE
+      → Each verdict includes a confidence level and source URLs
+
+      Example claims to try:
+        - "The Great Wall of China is visible from space."
+        - "Drinking 8 glasses of water daily is scientifically proven."
+        - "COVID-19 vaccines contain microchips."
+
+  [2] INTERACTIVE DEBATE MODE
+      → Enter a topic to debate
+      → Type your argument and press Enter
+      → The AI will respond using live evidence fetched from the web
+      → Continue arguing back and forth for multiple rounds
+      → Type "exit" or "quit" to end the debate
+
+  [3] EXIT
+      → Closes the program
+
+
+TROUBLESHOOTING
+───────────────
+  Problem : "GROQ_API_KEY not set" error
+  Fix     : Redo Step 2 in the SAME terminal window you run main.py in
+
+  Problem : "ModuleNotFoundError: No module named 'groq'"
+  Fix     : Run  pip install groq openai duckduckgo-search scikit-learn ortools
+
+  Problem : "RateLimitError" from Groq
+  Fix     : Wait 10–15 seconds and run again. Free tier has per-minute limits.
+
+  Problem : No search results returned
+  Fix     : Check your internet connection. DuckDuckGo may be temporarily rate-limiting.
+            Wait 30 seconds and try again.
+
+  Problem : python not recognized
+  Fix     : Use  python3 main.py  instead, or ensure Python is added to PATH
+
+
+============================================================
+  Team  : OM (24K-0711) | Vishal (24K-0625) | Zia (24K-0817)
+  Course: Artificial Intelligence — Section BCS-4K
+  Inst. : Sir Riaz Ahmed | FAST-NUCES Karachi | Spring 2026
+============================================================
